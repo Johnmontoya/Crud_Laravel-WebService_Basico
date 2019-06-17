@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('libro', 'LibroController');
+
+Route::get('api/v1/libros','LibroController@getLibros');
